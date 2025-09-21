@@ -15,7 +15,7 @@ fun main() {
 
     task6(10, 'F')
 
-    task7(-35)
+    task7(19)
 
     task8(10)
 }
@@ -151,7 +151,7 @@ fun task7(temperature: Int) {
         println("Куртка и шапка")
     } else if (temperature in 10..18) {
         println("Ветровка")
-    } else if (temperature > 19) {
+    } else {
         println("Футболка и шорты")
     }
 }
