@@ -151,7 +151,7 @@ fun task7(temperature: Int) {
         println("Куртка и шапка")
     } else if (temperature in 10..18) {
         println("Ветровка")
-    } else if (temperature > 18) {
+    } else if (temperature > 19) {
         println("Футболка и шорты")
     }
 }
