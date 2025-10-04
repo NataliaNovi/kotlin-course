@@ -62,7 +62,8 @@ fun example(arg: String) {
 fun example2(log: String) {
     //val log = "Пользователь вошел в систему -> 2021-12-01 09:48:23"
     val arrowIndex = log.split("->") // разделяет строку на массив строк по разделителю ->
-    val dateTime = arrowIndex[1].trim() //[1] мы смотрим только на вторую часть после стрелки и убираем пробелы в начале и конце строки
+    val dateTime =
+        arrowIndex[1].trim() //[1] мы смотрим только на вторую часть после стрелки и убираем пробелы в начале и конце строки
     val date = dateTime.split(" ")[0] //первый элемент - дата
     val time = dateTime.split(" ")[1] //второй элемент - время
     println(date)
@@ -75,9 +76,7 @@ fun example2(log: String) {
 fun example3(card: String) {
     //val card = "4539 1488 0343 6467"
     val lastFour = card.substring(15) // последние 4 символа
-    val maskcard = card.substring(0, 15).replace(Regex("\\d"), "*") //все цифры карты, кроме последних четырех
-//Regex("\\d") означает регулярное выражение, любая цифра от 0 до 9, причем пробелы остаются без изменений
-    println(maskcard + lastFour)
+    println("**** **** **** $lastFour")
 }
 
 //4. Форматирование адреса электронной почты.
@@ -85,7 +84,8 @@ fun example3(card: String) {
 //Преобразуйте его в строку "username [at] example [dot] com", используя функцию replace()
 fun example4(email: String) {
     //val email = "username@example.com"
-    val changeEmail = email.replace("@", " [at] ").replace(".", " [dot] ")
+    val changeEmail = email.replace("@", " [at] ")
+        .replace(".", " [dot] ")
     println(changeEmail)
 }
 
@@ -107,9 +107,8 @@ fun example6(phrase: String) {
     val words = phrase.split(" ") // разбили на слова
     var abbreviation = ""
     for (word in words) {
-        if (word.isNotEmpty()) { // убрали пробелы
-            abbreviation += word[0].uppercase() // добавляем букву к результату, берем первый символ и делаем заглавными
-        }
+        val firstLetter = word[0].uppercase()
+        abbreviation += firstLetter
     }
     println(abbreviation)
 }
