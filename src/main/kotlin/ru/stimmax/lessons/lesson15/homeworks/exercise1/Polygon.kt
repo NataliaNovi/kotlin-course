@@ -1,4 +1,8 @@
 package ru.stimmax.lessons.lesson15.homeworks.exercise1
+//Геометрические Фигуры
+//Базовый класс: Геометрическая Фигура
+//Производные классы: Многоугольник
+//Дополнительное разветвление для Многоугольник: Треугольник, Четырехугольник
 
 open class Polygon(name: String, val sides: Int) : GeometricFigure(name) {
 
