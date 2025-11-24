@@ -1,4 +1,4 @@
-package ru.stimmax.lessons.lesson21
+package ru.stimmax.lessons.lesson21.homeworks
 
 //Задача 1
 //
